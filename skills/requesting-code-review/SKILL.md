@@ -9,6 +9,13 @@ Dispatch a code reviewer subagent to catch issues before they cascade. The revie
 
 **Core principle:** Review early, review often.
 
+This already keeps the diff-reading off your context — the reviewer, not
+you, reads the diff and the surrounding code. That's a judgment dispatch
+(it returns a verdict), not an investigation dispatch (a brief you'd act
+on), so `superpowers:delegating-code-analysis` doesn't apply here; see that
+skill if you need to understand code before writing the review request
+itself.
+
 ## When to Request Review
 
 **Mandatory:**

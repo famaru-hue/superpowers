@@ -185,6 +185,13 @@ implementation.
 
 Use the least powerful model that can handle each role to conserve cost and increase speed.
 
+**Read-only investigation** (answering an implementer's context question,
+checking what an unfamiliar part of the codebase actually does before
+writing a task brief or a ruling): use `superpowers-analyst` via
+`superpowers:delegating-code-analysis` rather than reading the files
+yourself or spending a standard-tier implementer slot on a question with
+no code to write.
+
 **Mechanical implementation tasks** (isolated functions, clear specs, 1-2 files): use a fast, cheap model. Most implementation tasks are mechanical when the plan is well-specified.
 
 **Integration and judgment tasks** (multi-file coordination, pattern matching, debugging): use a standard model.

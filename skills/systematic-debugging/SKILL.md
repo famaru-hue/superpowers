@@ -117,6 +117,12 @@ You MUST complete each phase before proceeding to the next.
    - Keep tracing up until you find the source
    - Fix at source, not at symptom
 
+   **When the trace crosses several files**, use
+   `superpowers:delegating-code-analysis` to dispatch the trace instead of
+   Read/Grep-ing through each file yourself — give it the entry point and
+   the bad value, and let it report the call chain back as a brief. A
+   single-file trace is faster to just read.
+
 ### Phase 2: Pattern Analysis
 
 **Find the pattern before fixing:**
@@ -139,6 +145,11 @@ You MUST complete each phase before proceeding to the next.
    - What other components does this need?
    - What settings, config, environment?
    - What assumptions does it make?
+
+   Mapping dependencies across an unfamiliar subsystem is exactly what
+   `superpowers:delegating-code-analysis` is for — dispatch the question
+   ("what does X depend on and what does it assume?") and work from the
+   brief it returns.
 
 ### Phase 3: Hypothesis and Testing
 

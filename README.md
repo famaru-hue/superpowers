@@ -310,6 +310,17 @@ Superpowers is built by [Jesse Vincent](https://blog.fsck.com) and the rest of t
 - **writing-skills** - Create new skills following best practices (includes testing methodology)
 - **using-superpowers** - Introduction to the skills system
 
+**Efficiency**
+- **delegating-code-analysis** - Offload reading/tracing existing code to the `superpowers-analyst` agent (Sonnet, medium effort) so the controller model spends its own context on judgment, not file reads
+
+### Agents
+
+`agents/superpowers-analyst.md` is a read-only subagent (Sonnet, medium
+effort) dispatched by `delegating-code-analysis` — and referenced by
+`systematic-debugging`, `subagent-driven-development`, `writing-plans`, and
+`receiving-code-review` — to investigate existing code and return a compact
+structured brief instead of raw file contents.
+
 ## Philosophy
 
 - **Test-Driven Development** - Write tests first, always

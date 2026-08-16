@@ -83,6 +83,12 @@ IF conflicts with your human partner's prior decisions:
   Stop and discuss with your human partner first
 ```
 
+Checks 1-3 sometimes mean reading well beyond the file the comment is
+about — tracing why something is built the way it is, or whether removing
+it breaks a caller three files away. When that's the case, use
+`superpowers:delegating-code-analysis` instead of chasing it through Reads
+and Greps yourself; a one-file check is faster done directly.
+
 **your human partner's rule:** "External feedback - be skeptical, but check carefully"
 
 ## YAGNI Check for "Professional" Features

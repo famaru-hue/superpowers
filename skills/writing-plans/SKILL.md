@@ -26,6 +26,12 @@ If the spec covers multiple independent subsystems, it should have been broken i
 
 Before defining tasks, map out which files will be created or modified and what each one is responsible for. This is where decomposition decisions get locked in.
 
+**If the codebase is unfamiliar or the spec touches a subsystem you haven't
+read**, use `superpowers:delegating-code-analysis` to get the existing
+architecture, call chains, and dependencies as a brief before you map file
+structure — don't Read/Grep your way through it yourself. A codebase you
+already hold in context from this session doesn't need it.
+
 - Design units with clear boundaries and well-defined interfaces. Each file should have one clear responsibility.
 - You reason best about code you can hold in context at once, and your edits are more reliable when files are focused. Prefer smaller, focused files over large ones that do too much.
 - Files that change together should live together. Split by responsibility, not by technical layer.
